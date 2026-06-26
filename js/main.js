@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentPage = 0;
   let autoSlide = null;
   let dots = null;
+  let scrollTimer = null;
 
   function getItemsPerPage() {
     if (window.innerWidth <= 700) return 1;
@@ -22,15 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
     return Math.ceil(items.length / getItemsPerPage());
   }
 
+  function getGap() {
+    const style = window.getComputedStyle(slider);
+
+    return parseFloat(style.columnGap || style.gap || 0);
+  }
+
   function getItemWidth() {
-    const firstItem = items[0];
-    const styles = window.getComputedStyle(slider);
-
-    const gap = parseFloat(
-      styles.columnGap || styles.gap || 0
-    );
-
-    return firstItem.getBoundingClientRect().width + gap;
+    return items[0].getBoundingClientRect().width + getGap();
   }
 
   function updateDots() {
@@ -39,22 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
     dots.querySelectorAll("button").forEach((dot, index) => {
       dot.classList.toggle("active", index === currentPage);
     });
-  }
-
-  function goToPage(page) {
-    const totalPages = getTotalPages();
-
-    currentPage = ((page % totalPages) + totalPages) % totalPages;
-
-    const scrollPosition =
-      getItemWidth() * getItemsPerPage() * currentPage;
-
-    slider.scrollTo({
-      left: scrollPosition,
-      behavior: "smooth"
-    });
-
-    updateDots();
   }
 
   function buildDots() {
@@ -74,8 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
       dot.setAttribute("aria-label", `Career page ${i + 1}`);
 
       dot.addEventListener("click", () => {
-        currentPage = i;
-        goToPage(currentPage);
+        goToPage(i);
         restartAutoSlide();
       });
 
@@ -86,14 +69,29 @@ document.addEventListener("DOMContentLoaded", () => {
     updateDots();
   }
 
-  function nextPage() {
-    goToPage(currentPage + 1);
+  function goToPage(page) {
+    const totalPages = getTotalPages();
+
+    currentPage = ((page % totalPages) + totalPages) % totalPages;
+
+    const left =
+      getItemWidth() * getItemsPerPage() * currentPage;
+
+    slider.scrollTo({
+      left: left,
+      behavior: "smooth"
+    });
+
+    updateDots();
   }
 
-  function stopAutoSlide() {
-    if (autoSlide) {
-      clearInterval(autoSlide);
-      autoSlide = null;
+  function nextPage() {
+    const totalPages = getTotalPages();
+
+    if (currentPage >= totalPages - 1) {
+      goToPage(0);
+    } else {
+      goToPage(currentPage + 1);
     }
   }
 
@@ -105,9 +103,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3500);
   }
 
+  function stopAutoSlide() {
+    if (autoSlide) {
+      clearInterval(autoSlide);
+      autoSlide = null;
+    }
+  }
+
   function restartAutoSlide() {
+    stopAutoSlide();
     startAutoSlide();
   }
+
+  /* Update dot when user swipes or scrolls manually */
+slider.addEventListener("scroll", () => {
+  const pageWidth = getItemWidth() * getItemsPerPage();
+
+  if (pageWidth <= 0) return;
+
+  const detectedPage = Math.round(
+    slider.scrollLeft / pageWidth
+  );
+
+  const totalPages = getTotalPages();
+
+  currentPage = Math.max(
+    0,
+    Math.min(detectedPage, totalPages - 1)
+  );
+
+  updateDots();
+});
 
   slider.addEventListener("mouseenter", stopAutoSlide);
   slider.addEventListener("mouseleave", startAutoSlide);
@@ -116,7 +142,9 @@ document.addEventListener("DOMContentLoaded", () => {
     passive: true
   });
 
-  slider.addEventListener("touchend", startAutoSlide, {
+  slider.addEventListener("touchend", () => {
+    setTimeout(startAutoSlide, 800);
+  }, {
     passive: true
   });
 
@@ -129,9 +157,14 @@ document.addEventListener("DOMContentLoaded", () => {
       currentPage = 0;
 
       buildDots();
-      goToPage(0);
+
+      slider.scrollTo({
+        left: 0,
+        behavior: "auto"
+      });
+
       restartAutoSlide();
-    }, 200);
+    }, 250);
   });
 
   buildDots();
