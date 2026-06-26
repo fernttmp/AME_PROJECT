@@ -169,6 +169,9 @@ video{
   display:none;
 }
 
+.mobile-discover{
+  display:none;
+}
 
 /* =========================================================
    MOBILE
@@ -552,6 +555,34 @@ video{
     width:100%;
     justify-content:flex-start;
   }
+
+  .mobile-discover{
+  display:block;
+  margin-top:12px;
+  padding-top:14px;
+  border-top:1px solid #eee7dc;
+}
+
+.nav-menu .mobile-discover a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  padding:14px 16px;
+  border-radius:14px;
+
+  background:#07101d;
+  color:#f0c46d !important;
+
+  font-weight:800;
+  text-align:center;
+}
+
+.nav-menu .mobile-discover a i{
+  color:#f0c46d;
+  font-size:16px;
+}
 }
 
 /* =========================================================
