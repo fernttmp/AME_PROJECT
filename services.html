@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AME</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/services.css">
+<link rel="stylesheet" href="css/gallery.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+  <nav class="navbar">
+
+    <a href="index.html" class="logo">
+      <h1>AME</h1>
+      <span>AUTOMOTIVE MANUFACTURING ENGINEERING</span>
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="index.html">หน้าแรก</a></li>
+
+      <li class="has-dropdown">
+        <a href="#">เกี่ยวกับหลักสูตร</a>
+<ul class="dropdown">
+  <li><a href="about.html">ประวัติความเป็นมา</a></li>
+  <li><a href="about-program.html">ข้อมูลหลักสูตร</a></li>
+  <li><a href="curriculum.html">แผนการเรียน</a></li>
+</ul>
+      </li>
+
+      <li><a href="personnel.html">บุคลากร</a></li>
+      <li><a href="projects.html">ผลงาน/กิจกรรม</a></li>
+      <li><a href="services.html">บริการวิชาการ</a></li>
+      <li><a href="alumni.html">บัณฑิต</a></li>
+    </ul>
+<div class="site-search">
+  <input type="text" id="siteSearchInput" placeholder="ค้นหา...">
+  <div id="siteSearchResults" class="search-results"></div>
+</div>
+ <a href="contact.html" class="nav-btn">
+  Discover Your Future
+</a>
+
+<button class="menu-toggle" id="menuToggle">
+  ☰
+</button>
+
+</nav>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero-content">
+    <span class="page-hero-sub">ACADEMIC SERVICES</span>
+    <h1>บริการวิชาการ</h1>
+    <div class="page-hero-line"></div>
+    <p>
+      โครงการบริการวิชาการของสาขา AME เพื่อถ่ายทอดความรู้ด้านยานยนต์
+      เทคโนโลยี และวิศวกรรมสู่ชุมชนและภาคอุตสาหกรรม
+    </p>
+  </div>
+</section>
+
+<section class="service-section"id="academic-services">
+
+  <div class="service-group">
+    <span class="service-kicker">NON-PROFIT ACADEMIC SERVICE</span>
+    <h2>บริการวิชาการแบบไม่มีรายได้</h2>
+
+    <div class="service-grid">
+
+      <article class="service-card">
+                <div class="service-image" onclick="openGallery('oil')">
+          <img src="assets/images/oil1.png" alt="">
+          <span class="photo-count">3 รูป</span>
+        </div>
+
+        <div class="service-content">
+          <span class="service-tag">Community Service</span>
+          <h3>โครงการเปลี่ยนถ่ายน้ำมันเครื่องให้แก่บุคลากร และประชาชนบริเวณสถาบัน</h3>
+          <p>
+            กิจกรรมบริการวิชาการเพื่อส่งเสริมความรู้ด้านการบำรุงรักษารถยนต์
+            และการดูแลเครื่องยนต์เบื้องต้นแก่บุคลากรและประชาชน
+          </p>
+          <div class="service-meta">ผู้เข้าร่วม 72 คน</div>
+        </div>
+      </article>
+
+      <article class="service-card">
+          <div class="service-image" onclick="openGallery('ev')">
+          <img src="assets/images/ev1.png" alt="">
+          <span class="photo-count">6 รูป</span>
+        </div>
+
+        <div class="service-content">
+          <span class="service-tag">EV Technology</span>
+          <h3>โครงการอบรมให้ความรู้ด้านยานยนต์ไฟฟ้า สำหรับนักเรียนมัธยมตอนปลาย และ ปวช. ปวส.</h3>
+          <p>
+            ถ่ายทอดองค์ความรู้ด้านยานยนต์ไฟฟ้า ระบบพลังงาน และเทคโนโลยี EV
+            ให้กับนักเรียนและนักศึกษา
+          </p>
+          <div class="service-meta">ผู้เข้าร่วม 60 คน</div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div class="service-group">
+    <span class="service-kicker">PAID ACADEMIC SERVICE</span>
+    <h2>บริการวิชาการแบบมีรายได้</h2>
+
+    <div class="service-grid">
+
+      <article class="service-card">
+        <div class="service-image" onclick="openGallery('cwie')">
+          <img src="assets/images/cwie-1.png" alt="">
+          <span class="photo-count">2 รูป</span>
+        </div>
+
+        <div class="service-content">
+          <span class="service-tag">CWIE + EEC</span>
+          <h3>โครงการเร่งรัดและขยายผลการจัดหลักสูตรพัฒนาบุคลากร</h3>
+          <p>
+            ทำร่วมกับสาขาวิศวกรรมอุตสาหการและการผลิตอัจฉริยะ (IEM)
+            ภายใต้ทุนสนับสนุนจากกระทรวง อว.
+          </p>
+          <div class="service-meta">งบประมาณ 125,000 บาท</div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-image" onclick="openGallery('plc')">
+          <img src="assets/images/plc1.png" alt="">
+          <span class="photo-count">5 รูป</span>
+        </div>
+
+        <div class="service-content">
+          <span class="service-tag">PLC Programming</span>
+          <h3>โครงการอบรมพื้นฐานการเขียนโปรแกรมควบคุมลำดับ</h3>
+          <p>
+            อบรมให้ บริษัท เพอร์เฟค คอมพาเนียน กรุ๊ป จำนวน 3 รอบ
+            เพื่อพัฒนาทักษะด้านระบบควบคุมอัตโนมัติ
+          </p>
+          <div class="service-meta">งบรายได้ 78,000 บาท</div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+</section>
+<!-- GALLERY MODAL -->
+<div class="gallery-modal" id="galleryModal">
+
+  <div class="gallery-backdrop" onclick="closeGallery()"></div>
+
+  <div class="gallery-frame">
+
+    <button class="gallery-close" onclick="closeGallery()">×</button>
+
+    <button class="gallery-arrow gallery-prev" onclick="prevGallery()">‹</button>
+
+    <div class="gallery-main">
+      <img id="galleryImage" src="" alt="">
+    </div>
+
+    <button class="gallery-arrow gallery-next" onclick="nextGallery()">›</button>
+
+    <div class="gallery-footer">
+      <span class="gallery-title">AME Academic Service Gallery</span>
+      <span class="gallery-count" id="galleryCount">1 / 1</span>
+    </div>
+
+  </div>
+
+</div>
+
+<section class="contact-bar">
+
+  <div class="contact-info">
+
+    <div class="contact-title">
+      <h3>ติดต่อเรา</h3>
+      <p>PANYAPIWAT</p>
+    </div>
+
+    <div class="contact-item">
+      <span class="contact-icon">
+    <i class="fa-solid fa-location-dot"></i>
+</span>
+      <p>
+        สถาบันการจัดการปัญญาภิวัฒน์<br>
+        85/1 หมู่ 2 ถ.แจ้งวัฒนะ ต.บางตลาด<br>
+        อ.ปากเกร็ด จังหวัดนนทบุรี 11120
+      </p>
+    </div>
+
+    <div class="contact-item">
+      <span>☎</span>
+<p>
+  <a href="tel:+6628550000">02-855-0000</a><br>
+  <a href="tel:+6628550391">02-855-0391</a>
+</p>
+    </div>
+
+  </div>
+
+  <a href="https://maps.app.goo.gl/JNx87e4YphjHpJsL9" target="_blank" class="map-btn">
+    Map Pin →
+  </a>
+
+</section>
+
+<script src="js/navbar.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/search-data.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

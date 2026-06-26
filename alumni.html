@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AME</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/alumni.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+  <nav class="navbar">
+
+    <a href="index.html" class="logo">
+      <h1>AME</h1>
+      <span>AUTOMOTIVE MANUFACTURING ENGINEERING</span>
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="index.html">หน้าแรก</a></li>
+
+      <li class="has-dropdown">
+        <a href="#">เกี่ยวกับหลักสูตร</a>
+<ul class="dropdown">
+  <li><a href="about.html">ประวัติความเป็นมา</a></li>
+  <li><a href="about-program.html">ข้อมูลหลักสูตร</a></li>
+  <li><a href="curriculum.html">แผนการเรียน</a></li>
+</ul>
+      </li>
+
+      <li><a href="personnel.html">บุคลากร</a></li>
+      <li><a href="projects.html">ผลงาน/กิจกรรม</a></li>
+      <li><a href="services.html">บริการวิชาการ</a></li>
+      <li><a href="alumni.html">บัณฑิต</a></li>
+    </ul>
+    <div class="site-search">
+  <input type="text" id="siteSearchInput" placeholder="ค้นหา...">
+  <div id="siteSearchResults" class="search-results"></div>
+</div>
+<a href="contact.html" class="nav-btn">
+  Discover Your Future
+</a>
+
+<button class="menu-toggle" id="menuToggle">
+  ☰
+</button>
+
+</nav>
+</header>
+
+<!-- =========================
+     ALUMNI SECTION
+========================= -->
+
+
+
+<section class="alumni-hero">
+  <div class="alumni-content">
+    <span class="alumni-kicker">OUR ALUMNI</span>
+    <h1>บัณฑิตของเรา</h1>
+    <p>
+      ความสำเร็จของศิษย์เก่า คือความภาคภูมิใจของเรา
+      ร่วมเป็นส่วนหนึ่งของเครือข่ายบัณฑิต AME ที่ขับเคลื่อนอุตสาหกรรมยานยนต์และเทคโนโลยี
+    </p>
+
+    <div class="alumni-stats">
+      <div class="alumni-stat">
+        <strong>17</strong>
+        <span>บัณฑิต</span>
+      </div>
+      <div class="alumni-stat">
+        <strong>5+</strong>
+        <span>สายงาน</span>
+      </div>
+      <div class="alumni-stat">
+        <strong>10+</strong>
+        <span>องค์กร</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alumni-section" id="graduates">
+
+  <!-- FILTER -->
+
+<div class="alumni-filter">
+
+  <button class="active" data-filter="all">
+    ทั้งหมด
+  </button>
+
+  <button data-filter="japan">
+    Japan
+  </button>
+
+  <button data-filter="manufacturing">
+    Manufacturing
+  </button>
+
+  <button data-filter="qa">
+    QA
+  </button>
+
+  <button data-filter="design">
+    Design
+  </button>
+
+  <button data-filter="aviation">
+    Aviation
+  </button>
+
+</div>
+
+
+<!-- GRID -->
+
+<div class="alumni-grid">
+
+  <!-- 1 -->
+  <div class="alumni-card" data-category="japan design">
+    
+    <img src="assets/images/alumni1.png" alt="">
+    <div class="alumni-info">
+      <h3>ญาดา ยอดบุตร</h3>
+      <span class="job">วิศวกรออกแบบ</span>
+      <p class="company">YAWATA Electric Machinery</p>
+      <p class="desc">ปฏิบัติงาน ณ เมือง Kita Kyushu ประเทศญี่ปุ่น</p>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="alumni-card" data-category="japan design">
+    
+    <img src="assets/images/alumni2.png" alt="">
+    <div class="alumni-info">
+      <h3>อภินันท์พงศ์ มีสวัสดิวงศ์</h3>
+      <span class="job">วิศวกรออกแบบ</span>
+      <p class="company">DHOWATECHNOS</p>
+      <p class="desc">ปฏิบัติงานด้านการออกแบบทางวิศวกรรม ณ ประเทศญี่ปุ่น</p>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="alumni-card" data-category="japan manufacturing">
+    
+    <img src="assets/images/alumni3.png" alt="">
+    <div class="alumni-info">
+      <h3>วสลักษณ์ พงโศธร</h3>
+      <span class="job">วิศวกรฝ่ายเทคนิค</span>
+      <p class="company">ICSSAKABE</p>
+      <p class="desc">ปฏิบัติงานด้านเทคนิคและสนับสนุนงานวิศวกรรม ณ ประเทศญี่ปุ่น</p>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="alumni-card" data-category="japan design">
+    
+    <img src="assets/images/alumni4.png" alt="">
+    <div class="alumni-info">
+      <h3>นายพชร แก้วจันทึก</h3>
+      <span class="job">Electrical Design</span>
+      <p class="company">TAIYO INC.</p>
+      <p class="desc">ออกแบบระบบไฟฟ้าและงานด้านวิศวกรรมไฟฟ้า</p>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="alumni-card" data-category="japan design">
+    
+    <img src="assets/images/alumni5.png" alt="">
+    <div class="alumni-info">
+      <h3>กรชวัล คงพันธ์</h3>
+      <span class="job">วิศวกรออกแบบ</span>
+      <p class="company">TAIYO INC.</p>
+      <p class="desc">ทำงานด้านการออกแบบและพัฒนางานวิศวกรรม</p>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="alumni-card" data-category="japan automation">
+    
+    <img src="assets/images/alumni6.png" alt="">
+    <div class="alumni-info">
+      <h3>อชิตะ เจิมจรุง</h3>
+      <span class="job">Robot Engineer</span>
+      <p class="company">ICS SAKABE Co., Ltd.</p>
+      <p class="desc">ดูแลงานด้านหุ่นยนต์และระบบอัตโนมัติในภาคอุตสาหกรรม</p>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="alumni-card" data-category="manufacturing">
+    
+    <img src="assets/images/alumni7.png" alt="">
+    <div class="alumni-info">
+      <h3>จูเนียร์ ศุภรักษ์ เต็มเกียรติไพบูลย์</h3>
+      <span class="job">Senior Production Engineer</span>
+      <p class="company">Summit Auto Body Industry</p>
+      <p class="desc">ดูแลงานด้านการผลิตและบริหารทีมในสายงานอุตสาหกรรมยานยนต์</p>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="alumni-card" data-category="aviation">
+    
+    <img src="assets/images/alumni8.png" alt="">
+    <div class="alumni-info">
+      <h3>คุณคณิสรณ์ ลัภนโชคดี</h3>
+      <span class="job">ช่างอากาศยาน</span>
+      <p class="company">Lion Air</p>
+      <p class="desc">ดูแลงานซ่อมบำรุงอุปกรณ์ภาคพื้นและงานสนับสนุนด้านการบิน</p>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="alumni-card" data-category="manufacturing">
+    
+    <img src="assets/images/alumni9.png" alt="">
+    <div class="alumni-info">
+      <h3>นายเจษฎากรณ์ จ้อยลี</h3>
+      <span class="job">PS ME Engineer</span>
+      <p class="company">Paint Shop Engineering</p>
+      <p class="desc">ดูแล New Model และปรับปรุงไลน์การผลิต</p>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="alumni-card" data-category="manufacturing">
+    
+    <img src="assets/images/alumni10.png" alt="">
+    <div class="alumni-info">
+      <h3>นายพีรพัฒน์ ทะสี</h3>
+      <span class="job">Field Engineer</span>
+      <p class="company">Body Shop</p>
+      <p class="desc">ควบคุมคุณภาพตัวถังและปรับปรุงประสิทธิภาพการผลิต</p>
+    </div>
+  </div>
+
+  <!-- 11 -->
+  <div class="alumni-card" data-category="qa">
+   
+    <img src="assets/images/alumni11.png" alt="">
+    <div class="alumni-info">
+      <h3>นายนนทกร แก้วเหล่ายูง</h3>
+      <span class="job">QA Engineer</span>
+      <p class="company">Quality Analysis</p>
+      <p class="desc">วิเคราะห์ปัญหาหลังการขายและติดตามคุณภาพผลิตภัณฑ์</p>
+    </div>
+  </div>
+
+  <!-- 12 -->
+  <div class="alumni-card" data-category="qa">
+    
+    <img src="assets/images/alumni12.png" alt="">
+    <div class="alumni-info">
+      <h3>นายจิรภัทร กมลพรมงคล</h3>
+      <span class="job">QA Engineer</span>
+      <p class="company">Quality Analysis</p>
+      <p class="desc">วิเคราะห์และป้องกันปัญหาคุณภาพผลิตภัณฑ์</p>
+    </div>
+  </div>
+
+  <!-- 13 -->
+  <div class="alumni-card" data-category="manufacturing">
+    
+    <img src="assets/images/alumni13.png" alt="">
+    <div class="alumni-info">
+      <h3>นายธนาธิป ใจหาญ</h3>
+      <span class="job">Launch Engineer</span>
+      <p class="company">Automotive Manufacturing</p>
+      <p class="desc">ดูแลโครงการช่วง Launch และเตรียมความพร้อมฝ่ายผลิต</p>
+    </div>
+  </div>
+
+  <!-- 14 -->
+  <div class="alumni-card" data-category="manufacturing">
+    
+    <img src="assets/images/alumni14.png" alt="">
+    <div class="alumni-info">
+      <h3>นายบุญพิทักษ์ บุญทา</h3>
+      <span class="job">Field Engineer</span>
+      <p class="company">Paint Shop</p>
+      <p class="desc">ดูแลกระบวนการผลิตและควบคุมคุณภาพงานพ่นสี</p>
+    </div>
+  </div>
+
+  <!-- 15 -->
+  <div class="alumni-card" data-category="manufacturing">
+    
+    <img src="assets/images/alumni15.png" alt="">
+    <div class="alumni-info">
+      <h3>นายสิปปภาส แก้วมา</h3>
+      <span class="job">Field Engineer</span>
+      <p class="company">General Assembly</p>
+      <p class="desc">ออกแบบขั้นตอนการประกอบรถยนต์และปรับปรุงกระบวนการผลิต</p>
+    </div>
+  </div>
+
+  <!-- 16 -->
+  <div class="alumni-card" data-category="design">
+    
+    <img src="assets/images/alumni16.png" alt="">
+    <div class="alumni-info">
+      <h3>นายณัฐดนัย สุดสงวน</h3>
+      <span class="job">Vehicle Performance Engineer</span>
+      <p class="company">Automotive Engineering</p>
+      <p class="desc">พัฒนาระบบ HVAC, Cooling และ Software Vehicle</p>
+    </div>
+  </div>
+
+  <!-- 17 -->
+  <div class="alumni-card" data-category="design">
+    
+    <img src="assets/images/alumni17.png" alt="">
+    <div class="alumni-info">
+      <h3>นายเกรียงไกร จุฬาเจริญเลิศ</h3>
+      <span class="job">Interior Engineer</span>
+      <p class="company">Product Engineering</p>
+      <p class="desc">พัฒนาชิ้นส่วน Interior และออกแบบ CAD/Drawing</p>
+    </div>
+  </div>
+
+</div>
+
+</section>
+<script>
+
+const filterButtons = document.querySelectorAll(".alumni-filter button");
+const alumniCards = document.querySelectorAll(".alumni-card");
+
+filterButtons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    document
+      .querySelector(".alumni-filter .active")
+      .classList.remove("active");
+
+    button.classList.add("active");
+
+    const filter = button.dataset.filter;
+
+    alumniCards.forEach(card => {
+
+      if(filter === "all"){
+        card.style.display = "block";
+      }
+
+      else if(card.dataset.category.includes(filter)){
+        card.style.display = "block";
+      }
+
+      else{
+        card.style.display = "none";
+      }
+
+    });
+
+  });
+
+});
+
+</script>
+<section class="contact-bar">
+
+  <div class="contact-info">
+
+    <div class="contact-title">
+      <h3>ติดต่อเรา</h3>
+      <p>PANYAPIWAT</p>
+    </div>
+
+    <div class="contact-item">
+      <span class="contact-icon">
+    <i class="fa-solid fa-location-dot"></i>
+</span>
+      <p>
+        สถาบันการจัดการปัญญาภิวัฒน์<br>
+        85/1 หมู่ 2 ถ.แจ้งวัฒนะ ต.บางตลาด<br>
+        อ.ปากเกร็ด จังหวัดนนทบุรี 11120
+      </p>
+    </div>
+
+    <div class="contact-item">
+      <span>☎</span>
+<p>
+  <a href="tel:+6628550000">02-855-0000</a><br>
+  <a href="tel:+6628550391">02-855-0391</a>
+</p>
+    </div>
+
+  </div>
+
+  <a href="https://maps.app.goo.gl/JNx87e4YphjHpJsL9" target="_blank" class="map-btn">
+    Map Pin →
+  </a>
+
+</section>
+
+<script src="js/navbar.js"></script>
+<script src="js/search-data.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

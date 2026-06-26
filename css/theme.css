@@ -1,0 +1,36 @@
+:root{
+  --dark:#07101d;
+  --black:#020713;
+  --gold:#c99a4a;
+  --gold2:#f0c46d;
+  --cream:#f6f1ea;
+  --white:#ffffff;
+  --text:#111827;
+  --muted:#666666;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'IBM Plex Sans Thai',sans-serif;
+  color:var(--text);
+  background:#fff;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+}
+
+ul{
+  list-style:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}

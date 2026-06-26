@@ -1,0 +1,364 @@
+/* =========================================================
+   DISCOVER YOUR FUTURE / CONTACT PAGE
+   Uses current contact.html classes: ai-admission-*, career-match-panel, result-preview, admission-*
+========================================================= */
+
+.ai-admission-section{
+  padding:0;
+  background:#f8f6f2;
+}
+
+.ai-admission-container{
+  max-width:none;
+  width:100%;
+  margin:0;
+}
+
+.ai-admission-hero{
+  min-height:720px;
+  padding:150px 7% 80px;
+
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+
+  border-radius:0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7,16,29,.96) 0%,
+      rgba(7,16,29,.82) 35%,
+      rgba(7,16,29,.35) 65%,
+      rgba(7,16,29,.08) 100%
+    ),
+    url("../assets/images/hero-car.png");
+
+  background-size:cover;
+  background-position:center right;
+  background-repeat:no-repeat;
+
+  color:#fff;
+}
+
+.ai-admission-copy{
+    max-width:650px;
+    position:relative;
+    z-index:2;
+
+    margin-left:0;
+    text-align:left;
+}
+
+.ai-kicker{
+  color:#f0c46d;
+  letter-spacing:3px;
+  font-size:15px;
+  font-weight:800;
+}
+
+.ai-admission-copy h2{
+  font-family:'Kanit',sans-serif;
+  font-size:86px;
+  line-height:1.05;
+  margin:18px 0 24px;
+  text-transform:uppercase;
+  color:#fff;
+}
+
+.ai-admission-copy p{
+  font-size:22px;
+  line-height:1.85;
+  color:#e5e7eb;
+}
+
+.ai-feature-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  justify-content:flex-start;
+}
+
+.ai-feature-list span{
+  padding:14px 22px;
+  border-radius:999px;
+  color:#fff;
+  font-weight:800;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.22);
+  backdrop-filter:blur(8px);
+}
+.ai-admission-copy{ max-width:650px; position:relative; z-index:2; }
+.ai-kicker{ color:#f0c46d; font-weight:800; letter-spacing:2px; }
+.ai-admission-copy h2{
+  font-family:'Kanit',sans-serif;
+  font-size:72px;
+  line-height:1.05;
+  margin:18px 0;
+  text-transform:uppercase;
+}
+.ai-admission-copy p{ font-size:21px; line-height:1.8; color:#e5e7eb; }
+
+.ai-feature-list{ display:flex; flex-wrap:wrap; gap:12px; justify-content:flex-end; }
+.ai-feature-list span{
+  padding:12px 18px;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.18);
+  color:#fff;
+  font-weight:800;
+}
+.ai-main-layout{
+  width:min(1180px, 86%);
+  margin:34px auto 70px;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:34px;
+  align-items:start;
+}
+
+.career-match-panel,
+.result-preview{
+  width:100%;
+  min-height:720px;
+}
+
+@media(max-width:900px){
+  .ai-main-layout{
+    width:min(100% - 32px, 1180px);
+    grid-template-columns:1fr;
+  }
+
+  .career-match-panel,
+  .result-preview{
+    min-height:auto;
+  }
+}
+.career-match-panel{
+  padding:34px;
+  border-radius:26px;
+  background:linear-gradient(135deg,#07101d,#0b2a52);
+  color:white;
+  box-shadow:0 18px 45px rgba(0,0,0,.12);
+}
+.match-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:24px; margin-bottom:28px; }
+.match-head h3{ color:#fff; font-family:'Kanit',sans-serif; font-size:30px; margin-bottom:12px; }
+.match-head p{ color:#dbeafe; line-height:1.8; }
+.match-head span{
+  padding:10px 16px;
+  border-radius:999px;
+  border:1px solid rgba(240,196,109,.55);
+  background:rgba(240,196,109,.10);
+  color:#f0c46d;
+  font-size:.82rem;
+  font-weight:800;
+  white-space:nowrap;
+}
+.career-open-form{ display:grid; gap:18px; }
+.choice-question{
+  padding:18px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:18px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.choice-question h4{ grid-column:1/-1; color:#f0c46d; font-size:1.1rem; }
+.choice-question label{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#fff;
+  padding:8px 0;
+  cursor:pointer;
+}
+.choice-question input{ accent-color:#c99a4a; }
+.ai-btn-primary{
+  width:100%;
+  margin-top:6px;
+  padding:18px 28px;
+  border:none;
+  border-radius:999px;
+  background:linear-gradient(135deg,#f0c46d,#b88746);
+  color:#07101d;
+  font-weight:900;
+  cursor:pointer;
+  transition:.3s;
+}
+.ai-btn-primary:hover{ transform:translateY(-4px); box-shadow:0 16px 40px rgba(184,135,70,.28); }
+.result-preview{
+  padding:40px;
+  border-radius:26px;
+  background:#fff;
+  color:#07101d;
+  box-shadow:0 18px 45px rgba(0,0,0,.08);
+}
+.result-head{ display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:26px; }
+.result-head h3{ color:#07101d; font-family:'Kanit',sans-serif; font-size:1.8rem; }
+.ai-powered{
+  padding:10px 16px;
+  border-radius:999px;
+  color:#7c3aed;
+  border:1px solid #7c3aed;
+  background:transparent;
+  font-size:.8rem;
+  font-weight:800;
+}
+.result-score{
+  width:190px;
+  height:190px;
+  margin:20px auto 30px;
+  border:16px solid #57ad43;
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.result-score strong{ display:block; font-size:58px; line-height:1; color:#57ad43; }
+.result-score span{ color:#07101d; font-weight:800; }
+.result-title small{
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:999px;
+  background:#57ad43;
+  color:#fff;
+  font-weight:800;
+  text-transform:uppercase;
+}
+.result-title h3{
+  font-family:'Kanit',sans-serif;
+  font-size:42px;
+  line-height:1.1;
+  margin:14px 0;
+  color:#07101d;
+}
+.result-title p{ color:#374151; line-height:1.85; }
+.reason-box{ margin-top:24px; padding:22px; border-radius:18px; background:#f8fafc; }
+.reason-box h4{ margin-bottom:12px; }
+.reason-box ul{ padding-left:20px; }
+.reason-box li{ color:#374151; line-height:1.9; margin-bottom:8px; }
+.admission-section{ padding:70px 7%; background:#fff; }
+.admission-card{
+  max-width:1400px;
+  margin:auto;
+  padding:50px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#07101d,#0b2a52);
+  color:white;
+  text-align:center;
+}
+.admission-card span{ color:#f0c46d; font-weight:800; letter-spacing:2px; }
+.admission-card h2{ font-family:'Kanit',sans-serif; font-size:46px; line-height:1.25; margin:16px 0; }
+.admission-card p{ color:#dbeafe; font-size:20px; line-height:1.8; }
+.admission-btn{
+  display:inline-flex;
+  margin-top:28px;
+  padding:16px 34px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#f0c46d,#b88746);
+  color:#07101d;
+  font-weight:900;
+}
+@media(max-width:900px){
+  .ai-admission-section{ padding:90px 22px 50px; }
+  .ai-admission-hero{ padding:40px 26px; min-height:420px; align-items:flex-start; flex-direction:column; }
+  .ai-admission-copy h2{ font-size:44px; }
+  .ai-main-layout{ grid-template-columns:1fr; }
+  .choice-question{ grid-template-columns:1fr; }
+  .result-title h3{ font-size:32px; }
+  .admission-card{ padding:34px 24px; }
+  .admission-card h2{ font-size:34px; }
+}
+
+.hidden-result{
+  display:none;
+}
+
+.result-preview.show{
+  display:block;
+  animation:resultFade .45s ease;
+}
+
+@keyframes resultFade{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+.career-path-box{
+  margin-top:22px;
+  padding:22px;
+  border-radius:18px;
+  background:#fff7e8;
+  border:1px solid rgba(201,154,74,.25);
+}
+
+.career-path-box h4{
+  margin-bottom:12px;
+  color:#07101d;
+}
+
+.career-path-box ul{
+  padding-left:20px;
+}
+
+.career-path-box li{
+  color:#374151;
+  line-height:1.9;
+  margin-bottom:8px;
+}
+
+.ai-analyzing{
+  opacity:.7;
+  pointer-events:none;
+}
+
+.ai-feature-list span{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.ai-feature-list i{
+    font-size:18px;
+    color:#f0c46d;
+}
+
+.ai-admission-copy .ai-feature-list{
+  margin-top:28px;
+  display:grid;
+  grid-template-columns:repeat(2, max-content);
+  gap:14px 16px;
+  justify-content:flex-start;
+  align-items:center;
+}
+
+.ai-admission-copy .ai-feature-list span{
+  min-width:190px;
+  height:54px;
+  padding:0 22px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  border-radius:999px;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.28);
+  backdrop-filter:blur(10px);
+
+  color:#ffffff;
+  font-weight:800;
+}
+
+.ai-admission-copy .ai-feature-list i{
+  color:#f0c46d;
+  font-size:18px;
+}

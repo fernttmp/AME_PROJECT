@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AME</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/personnel.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+  <nav class="navbar">
+
+    <a href="index.html" class="logo">
+      <h1>AME</h1>
+      <span>AUTOMOTIVE MANUFACTURING ENGINEERING</span>
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="index.html">หน้าแรก</a></li>
+
+      <li class="has-dropdown">
+        <a href="#">เกี่ยวกับหลักสูตร</a>
+<ul class="dropdown">
+  <li><a href="about.html">ประวัติความเป็นมา</a></li>
+  <li><a href="about-program.html">ข้อมูลหลักสูตร</a></li>
+  <li><a href="curriculum.html">แผนการเรียน</a></li>
+</ul>
+      </li>
+
+      <li><a href="personnel.html">บุคลากร</a></li>
+      <li><a href="projects.html">ผลงาน/กิจกรรม</a></li>
+      <li><a href="services.html">บริการวิชาการ</a></li>
+      <li><a href="alumni.html">บัณฑิต</a></li>
+    </ul>
+<div class="site-search">
+  <input type="text" id="siteSearchInput" placeholder="ค้นหา...">
+  <div id="siteSearchResults" class="search-results"></div>
+</div>
+<a href="contact.html" class="nav-btn">
+  Discover Your Future
+</a>
+
+<button class="menu-toggle" id="menuToggle">
+  ☰
+</button>
+
+</nav>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero-content">
+    <h1>บุคลากร</h1>
+
+    <div class="page-hero-line"></div>
+
+    <p>
+      ณาจารย์และบุคลากร ผู้เชี่ยวชาญด้าน Automotive Engineering, AI, Smart Manufacturing และเทคโนโลยีแห่งอนาคต
+    </p>
+  </div>
+</section>
+
+<section class="personnel-section"id="teachers">
+
+  <div class="personnel-grid">
+
+<div class="person-card"
+id="poom"
+onclick="openProfile('p1')">
+      <img src="assets/images/person1.png" alt="">
+      <div class="person-info">
+        <span>หัวหน้าสาขาวิชา</span>
+        <h3>ผู้ช่วยศาสตราจารย์ ดร.ธนภัทร ศรีสุวรรณ</h3>
+        <p>วศ.ด. (วิศวกรรมอุตสาหการ)</p>
+        <button>ดูรายละเอียด →</button>
+      </div>
+    </div>
+
+    <div class="person-card"
+
+id="kittipong"  →  id="bandit"
+
+onclick="openProfile('p2')">
+      <img src="assets/images/person2.png" alt="">
+      <div class="person-info">
+        <span>อาจารย์</span>
+        <h3>อาจารย์ ดร.กิตติพงศ์ วัฒนกุล</h3>
+        <p>วศ.ด. (วิศวกรรมเครื่องกล)</p>
+        <button>ดูรายละเอียด →</button>
+      </div>
+    </div>
+
+    <div class="person-card"
+
+id="kreetha"
+
+onclick="openProfile('p3')">
+      <img src="assets/images/person3.png" alt="">
+      <div class="person-info">
+        <span>อาจารย์</span>
+        <h3>อาจารย์ ดร.พิชญ์สินี ลีลาวัฒน์</h3>
+        <p>วศ.ด. (วิศวกรรมอุตสาหการ)</p>
+        <button>ดูรายละเอียด →</button>
+      </div>
+    </div>
+
+    <div class="person-card"
+
+id="yodnapa"
+
+onclick="openProfile('p4')">
+      <img src="assets/images/person4.png" alt="">
+      <div class="person-info">
+        <span>อาจารย์</span>
+        <h3>อาจารย์ ดร.วรพจน์ เจริญผล</h3>
+        <p>วศ.ด. (วิศวกรรมไฟฟ้า)</p>
+        <button>ดูรายละเอียด →</button>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact-bar">
+
+  <div class="contact-info">
+
+    <div class="contact-title">
+      <h3>ติดต่อเรา</h3>
+      <p>PANYAPIWAT</p>
+    </div>
+
+    <div class="contact-item">
+      <span class="contact-icon">
+    <i class="fa-solid fa-location-dot"></i>
+</span>
+
+      <p>
+        สถาบันการจัดการปัญญาภิวัฒน์<br>
+        85/1 หมู่ 2 ถ.แจ้งวัฒนะ ต.บางตลาด<br>
+        อ.ปากเกร็ด จังหวัดนนทบุรี 11120
+      </p>
+
+    </div>
+
+    <div class="contact-item">
+
+      <span>☎</span>
+
+      <p>
+        02-855-0000<br>
+        02-855-0391
+      </p>
+
+    </div>
+
+  </div>
+
+  <a
+    href="https://maps.app.goo.gl/JNx87e4YphjHpJsL9"
+    target="_blank"
+    class="map-btn"
+  >
+    Map Pin →
+  </a>
+
+</section>
+
+
+<div class="profile-modal" id="profileModal">
+  <div class="profile-panel">
+
+    <button class="modal-close" onclick="closeProfile()">×</button>
+
+    <div class="profile-left">
+      <img id="modalImg" src="" alt="">
+      <span id="modalRole"></span>
+      <h2 id="modalName"></h2>
+      <p id="modalDegree"></p>
+      <a id="modalEmail" href="#"></a>
+    </div>
+
+    <div class="profile-right">
+
+      <div class="profile-detail">
+        <h3>
+    <i class="fa-solid fa-graduation-cap"></i>
+    วุฒิการศึกษา
+</h3>
+        <ul id="modalEducation"></ul>
+      </div>
+
+      <div class="profile-detail">
+<h3>
+    <i class="fa-solid fa-gears"></i>
+    ความเชี่ยวชาญ
+</h3>
+<ul id="modalExpertise"></ul>
+      </div>
+
+      <div class="profile-detail">
+<h3>
+    <i class="fa-solid fa-book-open"></i>
+    รายวิชาที่สอน
+</h3>
+<ul id="modalSubjects"></ul>
+      </div>
+
+      <div class="profile-detail">
+        <h3><i class="fa-solid fa-flask"></i> ผลงานวิจัย</h3>
+        <ul id="modalResearch"></ul>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<script src="js/navbar.js"></script>
+<script src="js/personnel.js"></script>
+<script src="js/search-data.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

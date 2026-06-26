@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Your Future | AME</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/discover.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+  <nav class="navbar">
+
+    <a href="index.html" class="logo">
+      <h1>AME</h1>
+      <span>AUTOMOTIVE MANUFACTURING ENGINEERING</span>
+    </a>
+
+    <ul class="nav-menu">
+
+      <li><a href="index.html">หน้าแรก</a></li>
+
+      <li class="has-dropdown">
+        <a href="#">เกี่ยวกับหลักสูตร</a>
+
+        <ul class="dropdown">
+          <li><a href="about.html">ประวัติความเป็นมา</a></li>
+          <li><a href="about-program.html">ข้อมูลหลักสูตร</a></li>
+          <li><a href="curriculum.html">แผนการเรียน</a></li>
+        </ul>
+      </li>
+
+      <li><a href="personnel.html">บุคลากร</a></li>
+      <li><a href="projects.html">ผลงาน/กิจกรรม</a></li>
+      <li><a href="services.html">บริการวิชาการ</a></li>
+      <li><a href="alumni.html">บัณฑิต</a></li>
+
+    </ul>
+<div class="site-search">
+  <input type="text" id="siteSearchInput" placeholder="ค้นหา...">
+  <div id="siteSearchResults" class="search-results"></div>
+</div>
+<a href="contact.html" class="nav-btn">
+  Discover Your Future
+</a>
+
+<button class="menu-toggle" id="menuToggle">
+  ☰
+</button>
+
+</nav>
+</header>
+
+<section class="ai-admission-section"id="advisor">
+
+  <div class="ai-admission-container">
+
+    <!-- HERO -->
+
+    <div class="ai-admission-hero">
+
+      <div class="hero-overlay"></div>
+
+      <div class="ai-admission-copy">
+
+        <span class="ai-kicker">
+          SMART CAREER INTELLIGENCE
+        </span>
+
+        <h2>
+          Discover<br>
+          Your Future
+        </h2>
+
+        <p>
+          ค้นหาเส้นทางการเรียนที่เหมาะกับคุณ
+          ผ่านระบบ AME Future Advisor
+        </p>
+
+      <div class="ai-visual">
+
+        <div class="ai-feature-list">
+
+          <span><i class="fa-solid fa-microchip"></i> AUTOMOTIVE</span>
+
+          <span><i class="fa-solid fa-gears"></i> SMART FACTORY</span>
+
+          <span><i class="fa-solid fa-car"></i> ROBOTICS</span>
+
+          <span><i class="fa-solid fa-bolt"></i> AI & DATA</span>
+
+        </div>
+
+      </div>
+      </div>
+
+     
+
+    </div>
+
+
+
+    <!-- MAIN -->
+
+    <div class="ai-main-layout">
+
+
+      <!-- ซ้าย -->
+
+      <div class="career-match-panel">
+
+        <div class="match-head">
+
+          <div>
+
+            <h3>AME Future Advisor</h3>
+
+            <p>
+
+              ตอบคำถาม 3 ข้อ
+
+              เพื่อให้ AI วิเคราะห์ว่าคุณเหมาะกับการเรียน
+
+              สาขาวิศวกรรมการผลิตยานยนต์มากน้อยแค่ไหน
+
+            </p>
+
+          </div>
+
+          <span>AI SYSTEM</span>
+
+        </div>
+
+
+        <form class="career-open-form" id="careerForm">
+
+          <div id="questionContainer"></div>
+
+          <button
+
+            type="submit"
+
+            class="ai-btn-primary">
+
+            วิเคราะห์ความเหมาะสม →
+
+          </button>
+
+        </form>
+
+      </div>
+
+
+
+      <!-- ขวา -->
+
+      <div
+
+        class="result-preview"
+
+        id="careerResult">
+
+
+        <div class="result-head">
+
+          <h3>ผลการวิเคราะห์ของคุณ</h3>
+
+          <span class="ai-powered">
+
+            AI POWERED
+
+          </span>
+
+        </div>
+
+
+        <div class="result-score">
+
+          <strong id="matchPercent">
+
+            0%
+
+          </strong>
+
+          <span>
+
+            Suitability Score
+
+          </span>
+
+        </div>
+
+
+
+        <div class="result-title">
+
+          <small>
+
+            AME FUTURE ADVISOR
+
+          </small>
+
+
+          <h3 id="careerTitle">
+
+            รอการวิเคราะห์
+
+          </h3>
+
+
+          <p id="careerDescription">
+
+            กรุณาตอบคำถาม
+
+            แล้วกดปุ่มวิเคราะห์ความเหมาะสม
+
+          </p>
+
+        </div>
+
+
+
+        <div class="reason-box">
+
+          <h4>
+
+            จุดเด่นที่พบจากคำตอบ
+
+          </h4>
+
+
+          <ul id="reasonList">
+
+            <li>
+
+              ระบบจะแสดงผลหลังจากการวิเคราะห์
+
+            </li>
+
+          </ul>
+
+        </div>
+
+
+
+        <div class="career-path-box">
+
+          <h4>
+
+            เส้นทางอาชีพหลังสำเร็จการศึกษา
+
+          </h4>
+
+
+          <ul id="careerList">
+
+            <li>
+
+              ระบบจะแนะนำอาชีพที่สามารถต่อยอดได้
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="admission-section">
+
+  <div class="admission-card">
+
+    <span>AME ADMISSION</span>
+
+    <h2>
+      พร้อมก้าวสู่อนาคต<br>
+      วิศวกรรมการผลิตยานยนต์
+    </h2>
+
+    <p>
+      หลักสูตรที่ผสาน Automotive Engineering,
+      AI, Automation และ Smart Manufacturing
+      เพื่อสร้างวิศวกรแห่งอนาคต
+    </p>
+
+    <a href="https://www.pim.ac.th/faculty/bachelor"
+       target="_blank"
+       class="admission-btn">
+      สมัครเรียนออนไลน์ →
+    </a>
+
+  </div>
+
+</section>
+<section class="contact-bar">
+
+  <div class="contact-info">
+
+    <div class="contact-title">
+      <h3>ติดต่อเรา</h3>
+      <p>PANYAPIWAT</p>
+    </div>
+
+    <div class="contact-item">
+      <span>
+    <i class="fa-solid fa-location-dot"></i>
+</span>
+
+      <p>
+        สถาบันการจัดการปัญญาภิวัฒน์<br>
+        85/1 หมู่ 2 ถ.แจ้งวัฒนะ ต.บางตลาด<br>
+        อ.ปากเกร็ด จังหวัดนนทบุรี 11120
+      </p>
+
+    </div>
+
+    <div class="contact-item">
+
+      <span>
+    <i class="fa-solid fa-phone"></i>
+</span>
+
+<p>
+  <a href="tel:+6628550000">02-855-0000</a><br>
+  <a href="tel:+6628550391">02-855-0391</a>
+</p>
+
+    </div>
+
+  </div>
+
+  <a href="https://maps.app.goo.gl/JNx87e4YphjHpJsL9"
+     target="_blank"
+     class="map-btn">
+    Map Pin →
+  </a>
+
+</section>
+
+<script src="js/navbar.js"></script>
+<script src="js/discover.js"></script>
+<script src="js/search-data.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

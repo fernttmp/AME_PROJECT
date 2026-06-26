@@ -1,0 +1,137 @@
+.service-section{
+  padding:90px 7%;
+  background:#f8f6f2;
+}
+
+.service-group{
+  max-width:1400px;
+  margin:0 auto 80px;
+}
+
+.service-kicker{
+  color:#c99a4a;
+  font-size:15px;
+  font-weight:800;
+  letter-spacing:3px;
+}
+
+.service-group h2{
+  font-family:'Kanit',sans-serif;
+  font-size:52px;
+  color:#07101d;
+  margin:14px 0 34px;
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+}
+
+.service-card{
+  background:#fff;
+  border-radius:32px;
+  overflow:hidden;
+  box-shadow:0 18px 45px rgba(0,0,0,.08);
+  transition:.35s;
+}
+
+.service-card{
+  background:#fff;
+  border-radius:32px;
+  overflow:hidden;
+  box-shadow:0 18px 45px rgba(0,0,0,.08);
+  transition:.35s ease;
+}
+
+.service-card:hover{
+  transform:translateY(-12px);
+  box-shadow:0 30px 70px rgba(0,0,0,.16);
+}
+
+.service-image{
+  position:relative;
+  height:280px;
+  overflow:hidden;
+  background:#07101d;
+}
+
+.service-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.photo-count{
+  position:absolute;
+  right:18px;
+  bottom:18px;
+  padding:10px 18px;
+  border-radius:999px;
+  background:#07101d;
+  color:#fff;
+  font-weight:800;
+}
+
+.service-content{
+  padding:34px;
+}
+
+.service-tag{
+  display:inline-flex;
+  margin-bottom:18px;
+  padding:9px 18px;
+  border-radius:999px;
+  background:rgba(201,154,74,.14);
+  color:#c99a4a;
+  font-weight:800;
+}
+
+.service-content h3{
+  font-family:'Kanit',sans-serif;
+  font-size:28px;
+  line-height:1.35;
+  color:#07101d;
+  margin-bottom:16px;
+}
+
+.service-content p{
+  color:#555;
+  line-height:1.85;
+  margin-bottom:24px;
+}
+
+.service-meta{
+  display:inline-flex;
+  padding:12px 20px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#f0c46d,#b88746);
+  color:#07101d;
+  font-weight:800;
+}
+
+@media(max-width:900px){
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .service-group h2{
+    font-size:38px;
+  }
+}
+
+
+.service-image img{
+  transition:transform .65s cubic-bezier(.22,1,.36,1), filter .45s ease;
+}
+
+.service-card:hover .service-image img{
+  transform:scale(1.08);
+  filter:brightness(1.05);
+}
+
+.service-card:hover .photo-count{
+  background:#c99a4a;
+  color:#07101d;
+}

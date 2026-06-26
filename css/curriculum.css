@@ -1,0 +1,255 @@
+.studyplan-section{
+  padding:100px 7%;
+  background:#f8f6f2;
+}
+
+.studyplan-header{
+  max-width:1250px;
+  margin:0 auto 60px;
+}
+
+.studyplan-header span{
+  color:#c99a4a;
+  font-size:15px;
+  font-weight:800;
+  letter-spacing:3px;
+}
+
+.studyplan-header h2{
+  font-family:'Kanit',sans-serif;
+  font-size:72px;
+  line-height:1;
+  color:#07101d;
+  margin:14px 0 22px;
+}
+
+.studyplan-header p{
+  font-size:20px;
+  line-height:1.9;
+  color:#374151;
+}
+
+.studyplan-grid{
+  max-width:1250px;
+  margin:auto;
+
+  display:flex;
+  flex-direction:column;
+  gap:34px;
+}
+
+.study-year-card{
+  background:#fff;
+
+  border-radius:30px;
+
+  padding:34px;
+
+  box-shadow:0 14px 40px rgba(0,0,0,.06);
+}
+
+.study-year-title{
+  margin-bottom:30px;
+}
+
+.study-year-title span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  min-width:120px;
+  height:56px;
+
+  border-radius:999px;
+
+  background:linear-gradient(135deg,#07101d,#0b2a52);
+
+  color:#fff;
+
+  font-size:24px;
+  font-weight:700;
+
+  font-family:'Kanit',sans-serif;
+}
+
+.semester-card{
+  margin-bottom:28px;
+
+  border:1px solid #ece7df;
+
+  border-radius:22px;
+
+  overflow:hidden;
+}
+
+.semester-header{
+  padding:18px 26px;
+
+  background:#fbfaf7;
+
+  border-bottom:1px solid #ece7df;
+
+  font-size:22px;
+  font-weight:700;
+
+  font-family:'Kanit',sans-serif;
+
+  color:#07101d;
+}
+
+.study-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.study-table th{
+  background:#fff;
+
+  padding:16px;
+
+  border-bottom:1px solid #ece7df;
+
+  color:#c99a4a;
+
+  font-size:15px;
+  font-weight:700;
+}
+
+.study-table td{
+  padding:16px;
+
+  border-bottom:1px solid #f2eee8;
+
+  color:#1f2937;
+
+  line-height:1.7;
+}
+
+.study-table tr:last-child td{
+  border-bottom:none;
+}
+
+@media(max-width:768px){
+
+  .studyplan-header h2{
+    font-size:52px;
+  }
+
+  .semester-header{
+    font-size:18px;
+  }
+
+  .study-table{
+    font-size:14px;
+  }}
+.year-block{
+  margin-top:70px;
+}
+
+.year-title{
+  margin-bottom:26px;
+}
+
+.year-title span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  min-width:120px;
+  height:62px;
+
+  padding:0 34px;
+
+  border-radius:22px;
+
+  background:
+    linear-gradient(135deg,#001b44,#002b6f);
+
+  color:#fff;
+
+  font-size:2rem;
+  font-weight:700;
+}
+
+.semester-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:28px;
+}
+
+.semester-card{
+  background:#fff;
+
+  border:1px solid #ece7df;
+  border-radius:28px;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.04);
+}
+
+.semester-head{
+  padding:26px 28px;
+
+  border-bottom:1px solid #eee;
+}
+
+.semester-head h3{
+  margin:0;
+
+  color:#001b44;
+
+  font-size:2rem;
+  font-weight:700;
+}
+
+.curriculum-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.curriculum-table th{
+  background:#faf7f2;
+
+  color:#c6922e;
+
+  font-size:1.4rem;
+  font-weight:700;
+
+  padding:18px;
+}
+
+.curriculum-table td{
+  padding:18px;
+
+  border-top:1px solid #f0ece6;
+
+  font-size:1.45rem;
+  color:#1d2433;
+}
+
+.curriculum-table td:last-child,
+.curriculum-table th:last-child{
+  text-align:center;
+  width:110px;
+}
+
+@media(max-width:980px){
+
+  .semester-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+.total-row td{
+  font-weight:800;
+  background:#fbfaf7;
+}
+
+.total-row td:last-child{
+  background:#d8aa5b;
+  color:#07101d;
+  font-size:20px;
+}

@@ -1,0 +1,385 @@
+/* =========================================================
+   FINAL ALUMNI SECTION
+========================================================= */
+
+.alumni-hero{
+  position:relative;
+  overflow:hidden;
+
+  min-height:680px;
+
+  display:flex;
+  align-items:center;
+
+  padding:120px 8% 80px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.98) 0%,
+      rgba(255,255,255,.94) 34%,
+      rgba(255,255,255,.72) 50%,
+      rgba(255,255,255,.18) 72%,
+      rgba(255,255,255,0) 100%
+    ),
+    url("../assets/images/alumni-bg.jpg");
+
+  background-size:125%;
+  background-position:center 72%;
+  background-repeat:no-repeat;
+}
+
+.alumni-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.98) 0%,
+      rgba(255,255,255,.96) 20%,
+      rgba(255,255,255,.42) 48%,
+      rgba(255,255,255,0) 100%
+    );
+
+  pointer-events:none;
+}
+
+.alumni-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.95) 0%,
+      rgba(255,255,255,.86) 32%,
+      rgba(255,255,255,.30) 58%,
+      rgba(255,255,255,0) 100%
+    );
+
+  pointer-events:none;
+}
+
+.alumni-content{
+  position:relative;
+  z-index:3;
+
+  max-width:760px;
+}
+
+.alumni-kicker{
+  display:inline-block;
+
+  color:#c79b4a;
+
+  font-size:15px;
+  font-weight:800;
+
+  letter-spacing:4px;
+
+  margin-bottom:24px;
+}
+
+.alumni-content h1{
+  font-family:'Kanit',sans-serif;
+
+  font-size:110px;
+  line-height:.92;
+
+  color:#001b44;
+
+  margin-bottom:30px;
+}
+
+.alumni-content p{
+  font-size:22px;
+  line-height:1.95;
+
+  color:#24324a;
+
+  max-width:700px;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.alumni-stats{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+
+  margin-top:42px;
+}
+
+.alumni-stat{
+  min-width:150px;
+
+  padding:24px 30px;
+
+  border-radius:24px;
+
+  background:
+    rgba(255,255,255,.86);
+
+  backdrop-filter:blur(14px);
+
+  border:1px solid rgba(255,255,255,.7);
+
+  box-shadow:
+    0 16px 42px rgba(0,0,0,.08);
+}
+
+.alumni-stat strong{
+  display:block;
+
+  font-size:46px;
+  line-height:1;
+
+  color:#001b44;
+
+  margin-bottom:8px;
+}
+
+.alumni-stat span{
+  color:#667085;
+
+  font-size:15px;
+  font-weight:700;
+}
+
+/* =========================================================
+   ALUMNI SECTION
+========================================================= */
+
+.alumni-section{
+  position:relative;
+  z-index:5;
+
+  padding:0 8% 100px;
+
+  margin-top:-40px;
+
+  background:#f8f6f2;
+}
+
+/* =========================
+   FILTER
+========================= */
+
+.alumni-filter{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+
+  margin-bottom:42px;
+}
+
+.alumni-filter button{
+  border:none;
+  cursor:pointer;
+
+  padding:15px 24px;
+
+  border-radius:999px;
+
+  background:white;
+
+  color:#001b44;
+
+  font-weight:700;
+  font-size:15px;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.05);
+
+  transition:.28s;
+}
+
+.alumni-filter button.active,
+.alumni-filter button:hover{
+  background:#c79b4a;
+  color:white;
+
+  transform:translateY(-3px);
+}
+
+/* =========================
+   GRID
+========================= */
+
+.alumni-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:24px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.alumni-card{
+  position:relative;
+
+  padding:30px;
+
+  border-radius:30px;
+
+  background:white;
+
+  border:1px solid #eef1f5;
+
+  box-shadow:
+    0 16px 42px rgba(0,0,0,.06);
+
+  transition:.35s ease;
+}
+
+.alumni-card:hover{
+  transform:translateY(-10px);
+
+  box-shadow:
+    0 28px 60px rgba(0,0,0,.12);
+}
+
+
+
+.alumni-card img{
+  width:110px;
+  height:110px;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  margin-bottom:24px;
+
+  border:5px solid #f5efe5;
+}
+
+.alumni-info h3{
+  font-size:28px;
+  line-height:1.2;
+
+  color:#001b44;
+
+  margin-bottom:10px;
+}
+
+.job{
+  display:block;
+
+  color:#c79b4a;
+
+  font-weight:800;
+
+  margin-bottom:10px;
+}
+
+.company{
+  color:#344054;
+
+  font-weight:700;
+
+  line-height:1.6;
+
+  margin-bottom:16px;
+}
+
+.desc{
+  color:#667085;
+
+  line-height:1.8;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.alumni-cta{
+  margin-top:70px;
+
+  padding:46px;
+
+  border-radius:34px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #001b44,
+      #0b2f66
+    );
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:34px;
+
+  overflow:hidden;
+
+  position:relative;
+}
+
+.alumni-cta::before{
+  content:"";
+
+  position:absolute;
+
+  width:420px;
+  height:420px;
+
+  border-radius:50%;
+
+  right:-120px;
+  top:-120px;
+
+  background:
+    rgba(255,255,255,.05);
+}
+
+.alumni-cta h2{
+  color:white;
+
+  font-size:42px;
+
+  margin-bottom:12px;
+}
+
+.alumni-cta p{
+  color:rgba(255,255,255,.82);
+
+  font-size:18px;
+  line-height:1.8;
+}
+
+.alumni-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:18px 34px;
+
+  border-radius:999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f0c46d,
+      #b88746
+    );
+
+  color:#07101d;
+
+  font-weight:800;
+
+  text-decoration:none;
+
+  white-space:nowrap;
+}
+

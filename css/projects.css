@@ -1,0 +1,269 @@
+.project-hero{
+  min-height:520px;
+  padding:150px 7% 80px;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(7,16,29,.94),rgba(7,16,29,.75),rgba(7,16,29,.25)),
+    url("../assets/images/hero-car.png");
+  background-size:cover;
+  background-position:center right;
+  color:white;
+}
+
+.project-hero-content{
+  max-width:760px;
+}
+
+.project-hero-content span{
+  color:#d8aa5b;
+  letter-spacing:4px;
+  font-weight:800;
+}
+
+.project-hero-content h1{
+  font-family:'Kanit',sans-serif;
+  font-size:78px;
+  line-height:1;
+  margin:18px 0;
+}
+
+.project-line{
+  width:90px;
+  height:4px;
+  background:#d8aa5b;
+  margin:26px 0;
+}
+
+.project-hero-content p{
+  font-size:22px;
+  line-height:1.8;
+  color:#f3f4f6;
+}
+
+.activity-section{
+  padding:70px 7% 90px;
+  background:#f8f6f2;
+}
+
+.activity-head{
+  max-width:1300px;
+  margin:0 auto 36px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding-bottom:26px;
+  border-bottom:1px solid #ddd7ce;
+}
+
+.activity-icon{
+  width:58px;
+  height:58px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:white;
+  font-size:32px;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.activity-head h2{
+  font-family:'Kanit',sans-serif;
+  font-size:36px;
+  color:#07101d;
+}
+
+.activity-head p{
+  color:#555;
+}
+
+.activity-list{
+  max-width:1300px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+
+.activity-card{
+  display:grid;
+  grid-template-columns:300px 1fr;
+  gap:26px;
+  padding:20px;
+  border-radius:26px;
+  background:#ffffff;
+  box-shadow:0 14px 38px rgba(0,0,0,.07);
+}
+
+.activity-info{
+  padding:12px 4px 12px 12px;
+}
+
+.activity-icon-box{
+  width:86px;
+  height:86px;
+  border-radius:22px;
+  background:#07101d;
+  color:#d8aa5b;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:42px;
+  margin-bottom:22px;
+}
+
+.activity-info h3{
+  font-family:'Kanit',sans-serif;
+  font-size:32px;
+  color:#07101d;
+  margin-bottom:10px;
+}
+
+.activity-info h4{
+  font-size:20px;
+  line-height:1.45;
+  color:#07101d;
+  margin-bottom:14px;
+}
+
+.activity-info p{
+  color:#555;
+  line-height:1.8;
+  margin-bottom:18px;
+}
+
+.photo-count{
+  display:inline-flex;
+  padding:8px 18px;
+  border-radius:999px;
+  background:#07101d;
+  color:#d8aa5b;
+  font-weight:800;
+  font-size:14px;
+}
+
+.activity-gallery{
+  display:grid;
+  gap:12px;
+}
+
+.activity-gallery.cols-1{
+  grid-template-columns:1fr;
+}
+
+.activity-gallery.cols-2{
+  grid-template-columns:repeat(2,1fr);
+}
+
+.activity-gallery.cols-3{
+  grid-template-columns:repeat(3,1fr);
+}
+
+.activity-gallery.cols-4{
+  grid-template-columns:repeat(4,1fr);
+}
+
+
+
+
+
+
+@media(max-width:1100px){
+  .activity-card{
+    grid-template-columns:1fr;
+  }
+
+  .activity-gallery.cols-4,
+  .activity-gallery.cols-3{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:650px){
+  .project-hero-content h1{
+    font-size:48px;
+  }
+
+  .activity-gallery.cols-4,
+  .activity-gallery.cols-3,
+  .activity-gallery.cols-2{
+    grid-template-columns:1fr;
+  }
+
+
+}
+
+.activity-gallery.cols-6{
+  grid-template-columns:repeat(3,1fr);
+}
+
+.activity-gallery.cols-6 img{
+  height:230px;
+}
+.safety-gallery{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:16px;
+
+}
+
+.safety-gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.safety-gallery img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:18px;
+  background:#f3f4f6;
+  display:block;
+  transition:.3s ease;
+}
+
+.safety-gallery img:hover{
+  transform:scale(1.01);
+}
+
+.activity-gallery{
+  display:grid;
+  gap:16px;
+  overflow:hidden;
+}
+
+.activity-gallery img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:18px;
+  display:block;
+
+  opacity:1;
+  filter:none;
+  transform:none;
+
+  transition:opacity .35s ease, box-shadow .35s ease;
+}
+
+.activity-gallery:hover img{
+  opacity:.45;
+}
+
+.activity-gallery img:hover{
+  opacity:1;
+  transform:none;
+  box-shadow:0 12px 28px rgba(0,0,0,.18);
+}
+
+
+
+
+

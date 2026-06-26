@@ -1,0 +1,384 @@
+/* =========================
+   COMMON SHARED STYLES
+========================= */
+
+.section-kicker{
+  color:var(--gold);
+  letter-spacing:3px;
+  font-size:15px;
+  font-weight:700;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.section-title{
+  max-width:1300px;
+  margin:auto;
+  margin-bottom:36px;
+}
+.section-title h2{
+  font-family:'Kanit',sans-serif;
+  font-size:42px;
+}
+
+.primary-btn,.secondary-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px 30px;
+  border-radius:999px;
+  font-weight:700;
+  transition:0.3s;
+}
+.primary-btn{ background:linear-gradient(135deg,#f0c46d,#b88746); color:#111827; }
+.secondary-btn{ border:1px solid rgba(7,16,29,0.25); color:#07101d; background:rgba(255,255,255,0.65); }
+.primary-btn:hover,.secondary-btn:hover{ transform:translateY(-4px); }
+
+.hero-line,.page-hero-line{
+  width:90px;
+  height:3px;
+  background:var(--gold);
+  margin:30px 0;
+}
+
+.page-hero{
+  min-height:720px;
+  padding:150px 7% 70px;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,0.98) 0%,rgba(246,241,234,0.92) 34%,rgba(255,255,255,0.10) 58%,rgba(255,255,255,0) 100%),
+    url("../assets/images/hero-car.png");
+  background-size:cover;
+  background-position:center right;
+  background-repeat:no-repeat;
+}
+.page-hero-content{ max-width:720px; }
+.page-hero h1{
+  font-family:'Kanit',sans-serif;
+  font-size:100px;
+  line-height:0.95;
+  color:#07101d;
+  margin-bottom:30px;
+}
+.page-hero p{
+  font-size:20px;
+  line-height:1.9;
+  color:#333;
+  max-width:680px;
+  margin-bottom:26px;
+}
+
+.contact-bar{
+  width:100%;
+  padding:34px 7%;
+  background:#07101d;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:34px;
+}
+.contact-info{ display:flex; align-items:center; gap:42px; flex-wrap:wrap; }
+.contact-title h3{ font-size:26px; font-family:'Kanit',sans-serif; }
+.contact-title p{ color:var(--gold); letter-spacing:2px; font-size:13px; font-weight:700; }
+.contact-item{ display:flex; gap:14px; }
+.contact-item span{
+  width:50px; height:50px; min-width:50px;
+  border-radius:50%; border:1px solid var(--gold);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--gold); font-size:24px;
+}
+.contact-item p{ color:#e5e7eb; line-height:1.7; font-size:15px; }
+.map-btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:16px 34px;
+  background:linear-gradient(135deg,#f0c46d,#b88746);
+  color:#111827; font-weight:800; border-radius:999px;
+  white-space:nowrap; transition:0.3s;
+}
+.map-btn:hover{ transform:translateY(-4px); background:#fff; }
+
+@media(max-width:700px){
+  .page-hero{ min-height:520px; padding:120px 22px 60px; background-position:center; }
+  .page-hero h1{ font-size:52px; }
+  .page-hero p{ font-size:16px; }
+  .section-title h2{ font-size:32px; }
+  .contact-bar{ flex-direction:column; align-items:flex-start; padding:30px 22px; }
+  .contact-info{ flex-direction:column; align-items:flex-start; gap:24px; }
+  .map-btn{ width:100%; }
+}
+
+/* =========================================================
+   AME INTEGRATED MOTION PACK
+   เพิ่มลูกเล่นโดยไม่ต้องแก้ HTML
+   - ใช้กับไฟล์เดิม common.css
+   - ถ้ามีปัญหา ลบเฉพาะส่วนนี้ออกได้
+========================================================= */
+
+.ame-progress-bar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:0%;
+  height:4px;
+  z-index:100000;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+  box-shadow:0 0 18px rgba(201,154,74,.55);
+  transition:width .08s linear;
+}
+
+.header{
+  transition:background .3s ease, box-shadow .3s ease, backdrop-filter .3s ease;
+}
+
+.header.scrolled{
+  background:rgba(255,255,255,.82);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  box-shadow:0 10px 35px rgba(7,16,29,.12);
+}
+
+.header.scrolled .navbar{
+  height:78px;
+  transition:height .3s ease, padding .3s ease;
+}
+
+.header.scrolled .logo h1{
+  font-size:42px;
+  transition:font-size .3s ease;
+}
+
+.hero-content > *,
+.page-hero-content > *,
+.alumni-content > *,
+.ai-admission-copy > *,
+.project-hero-content > *{
+  animation:ameHeroUp .9s cubic-bezier(.22,1,.36,1) both;
+}
+
+.hero-content > *:nth-child(1),
+.page-hero-content > *:nth-child(1),
+.alumni-content > *:nth-child(1),
+.ai-admission-copy > *:nth-child(1),
+.project-hero-content > *:nth-child(1){ animation-delay:.08s; }
+
+.hero-content > *:nth-child(2),
+.page-hero-content > *:nth-child(2),
+.alumni-content > *:nth-child(2),
+.ai-admission-copy > *:nth-child(2),
+.project-hero-content > *:nth-child(2){ animation-delay:.22s; }
+
+.hero-content > *:nth-child(3),
+.page-hero-content > *:nth-child(3),
+.alumni-content > *:nth-child(3),
+.ai-admission-copy > *:nth-child(3),
+.project-hero-content > *:nth-child(3){ animation-delay:.36s; }
+
+.hero-content > *:nth-child(4),
+.page-hero-content > *:nth-child(4),
+.alumni-content > *:nth-child(4),
+.ai-admission-copy > *:nth-child(4),
+.project-hero-content > *:nth-child(4){ animation-delay:.50s; }
+
+@keyframes ameHeroUp{
+  from{ opacity:0; transform:translateY(56px); filter:blur(6px); }
+  to{ opacity:1; transform:translateY(0); filter:blur(0); }
+}
+
+.hero-line,
+.page-hero-line,
+.project-line{
+  transform-origin:left center;
+  animation:ameLineGrow .8s cubic-bezier(.22,1,.36,1) .35s both;
+}
+
+@keyframes ameLineGrow{
+  from{ transform:scaleX(0); opacity:0; }
+  to{ transform:scaleX(1); opacity:1; }
+}
+
+.ame-reveal{
+  opacity:0;
+  transform:translateY(54px);
+  transition:opacity .85s cubic-bezier(.22,1,.36,1), transform .85s cubic-bezier(.22,1,.36,1), filter .85s cubic-bezier(.22,1,.36,1);
+  filter:blur(5px);
+  will-change:opacity, transform;
+}
+
+.ame-reveal.ame-show{
+  opacity:1;
+  transform:translateY(0);
+  filter:blur(0);
+}
+
+.ame-stagger > .ame-reveal:nth-child(1){ transition-delay:.04s; }
+.ame-stagger > .ame-reveal:nth-child(2){ transition-delay:.12s; }
+.ame-stagger > .ame-reveal:nth-child(3){ transition-delay:.20s; }
+.ame-stagger > .ame-reveal:nth-child(4){ transition-delay:.28s; }
+.ame-stagger > .ame-reveal:nth-child(5){ transition-delay:.36s; }
+.ame-stagger > .ame-reveal:nth-child(6){ transition-delay:.44s; }
+.ame-stagger > .ame-reveal:nth-child(7){ transition-delay:.52s; }
+.ame-stagger > .ame-reveal:nth-child(8){ transition-delay:.60s; }
+
+.highlight-item,
+.why-card,
+.video-card,
+.career-item,
+.track-panel,
+.program-card,
+.program-stat-card,
+.program-category-card,
+.elective-chip,
+.plo-card,
+.person-card,
+.service-card,
+.activity-card,
+.alumni-card,
+.semester-card,
+.ame-intro-card,
+.career-match-panel,
+.result-preview{
+  transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+
+.highlight-item:hover,
+.why-card:hover,
+.video-card:hover,
+.program-card:hover,
+.program-stat-card:hover,
+.program-category-card:hover,
+.elective-chip:hover,
+.plo-card:hover,
+.person-card:hover,
+.service-card:hover,
+.activity-card:hover,
+.alumni-card:hover,
+.semester-card:hover,
+.ame-intro-card:hover,
+.career-match-panel:hover,
+.result-preview:hover{
+  transform:translateY(-8px);
+  box-shadow:0 24px 65px rgba(7,16,29,.14);
+}
+
+.video-card video,
+.about-image img,
+.person-card img,
+.service-image img,
+.activity-gallery img,
+.alumni-card img,
+.track-panel img{
+  transition:transform .65s cubic-bezier(.22,1,.36,1), filter .4s ease;
+}
+
+.video-card:hover video,
+.about-image:hover img,
+.person-card:hover img,
+.service-card:hover .service-image img,
+.activity-gallery img:hover,
+.alumni-card:hover img,
+.track-panel:hover img{
+  transform:scale(1.06);
+}
+
+.ame-glow-card{
+  position:relative;
+  overflow:hidden;
+}
+
+.ame-glow-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .25s ease;
+  background:radial-gradient(circle at var(--x,50%) var(--y,50%), rgba(240,196,109,.24), transparent 34%);
+}
+
+.ame-glow-card:hover::after{
+  opacity:1;
+}
+
+.primary-btn,
+.secondary-btn,
+.nav-btn,
+.ai-btn-primary,
+.person-info button,
+.map-btn,
+.alumni-filter button,
+.career-nav{
+  position:relative;
+  overflow:hidden;
+}
+
+.ame-ripple{
+  position:absolute;
+  border-radius:50%;
+  transform:scale(0);
+  animation:ameRipple .6s ease-out;
+  background:rgba(255,255,255,.55);
+  pointer-events:none;
+}
+
+@keyframes ameRipple{
+  to{ transform:scale(4); opacity:0; }
+}
+
+.gallery-modal.active .gallery-frame,
+.profile-modal.active .profile-panel{
+  animation:ameModalIn .38s cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes ameModalIn{
+  from{ opacity:0; transform:translateY(28px) scale(.94); }
+  to{ opacity:1; transform:translateY(0) scale(1); }
+}
+
+.year-block{
+  position:relative;
+}
+
+.year-block::before{
+  content:"";
+  position:absolute;
+  left:28px;
+  top:76px;
+  bottom:-34px;
+  width:3px;
+  background:linear-gradient(var(--gold), transparent);
+  transform:scaleY(0);
+  transform-origin:top;
+  transition:transform .9s cubic-bezier(.22,1,.36,1);
+}
+
+.year-block.ame-show::before{
+  transform:scaleY(1);
+}
+
+@media(max-width:768px){
+  .header.scrolled .navbar{ height:auto; }
+  .header.scrolled .logo h1{ font-size:36px; }
+  .ame-reveal{ transform:translateY(32px); }
+}
+
+@media(prefers-reduced-motion:reduce){
+  *, *::before, *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+}
+
+
+.contact-item a{
+    color:#ffffff;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.contact-item a:hover{
+    color:#d8aa5b;
+}

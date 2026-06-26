@@ -1,0 +1,5 @@
+Split from actual uploaded project files.
+Removed duplication by moving shared CSS to common.css: page-hero, contact-bar, buttons, section-title.
+Kept original page styles and page appearance as much as possible.
+Added complete discover.css for current contact.html classes because original contact section was incomplete/mixed.
+Separated script(5).js into main.js, navbar.js, personnel.js, gallery.js, discover.js.
