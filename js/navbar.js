@@ -262,3 +262,53 @@ if(menuBtn && navMenu){
     });
   }
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.querySelector(".navbar");
+  const searchBox = document.querySelector(".site-search");
+  const menuButton = document.getElementById("menuToggle");
+
+  if (!navbar || !searchBox || !menuButton) return;
+
+  if (navbar.querySelector(".mobile-search-toggle")) return;
+
+  const searchButton = document.createElement("button");
+
+  searchButton.type = "button";
+  searchButton.className = "mobile-search-toggle";
+  searchButton.setAttribute("aria-label", "Open search");
+
+  searchButton.innerHTML =
+    '<i class="fa-solid fa-magnifying-glass"></i>';
+
+  menuButton.insertAdjacentElement("beforebegin", searchButton);
+
+  searchButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+
+    searchBox.classList.toggle("mobile-open");
+
+    const input = searchBox.querySelector("input");
+
+    if (searchBox.classList.contains("mobile-open") && input) {
+      input.focus();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    const clickedSearch = event.target.closest(".site-search");
+    const clickedSearchButton = event.target.closest(
+      ".mobile-search-toggle"
+    );
+
+    if (!clickedSearch && !clickedSearchButton) {
+      searchBox.classList.remove("mobile-open");
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 700) {
+      searchBox.classList.remove("mobile-open");
+    }
+  });
+});
